@@ -1,0 +1,13 @@
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file:./src/main/resources/defaultConfig
+        git:
+          uri: file:./src/main/resources/config
